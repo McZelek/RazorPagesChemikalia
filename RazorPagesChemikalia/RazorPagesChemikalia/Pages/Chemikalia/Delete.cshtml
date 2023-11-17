@@ -1,0 +1,82 @@
+﻿@page "{id:int?}"
+@model RazorPagesChemikalia.Pages.Chemikalia.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Chemikalium</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Nazwa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Nazwa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.DataOdkrycia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.DataOdkrycia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Ph)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Ph)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Rozpuszczalnosc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Rozpuszczalnosc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Toksycznosc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Toksycznosc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Zapach)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Zapach)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.StanSkupienia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.StanSkupienia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Barwa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Barwa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.TemperaturaTopnienia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.TemperaturaTopnienia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chemikalium.Uzytecznosc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chemikalium.Uzytecznosc)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Chemikalium.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

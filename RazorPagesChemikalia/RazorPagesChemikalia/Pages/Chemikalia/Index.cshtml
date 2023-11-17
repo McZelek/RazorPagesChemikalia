@@ -1,0 +1,101 @@
+﻿@page
+@model RazorPagesChemikalia.Pages.Chemikalia.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form>
+    <p>
+        <select asp-for="ChemikaliumZapach" asp-items="Model.Zapachy">
+            <option value="">-- wszystkie zapachy --</option>
+        </select>
+        <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].DataOdkrycia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Ph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Rozpuszczalnosc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Toksycznosc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Zapach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].StanSkupienia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Barwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].TemperaturaTopnienia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chemikalium[0].Uzytecznosc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Chemikalium) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataOdkrycia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rozpuszczalnosc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Toksycznosc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zapach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StanSkupienia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemperaturaTopnienia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uzytecznosc)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

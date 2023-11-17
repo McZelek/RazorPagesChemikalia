@@ -1,0 +1,80 @@
+﻿@page "{id:int?}"
+@model RazorPagesChemikalia.Pages.Chemikalia.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Chemikalium</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Chemikalium.Id" />
+            <div class="form-group">
+                <label asp-for="Chemikalium.Nazwa" class="control-label"></label>
+                <input asp-for="Chemikalium.Nazwa" class="form-control" />
+                <span asp-validation-for="Chemikalium.Nazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.DataOdkrycia" class="control-label"></label>
+                <input asp-for="Chemikalium.DataOdkrycia" class="form-control" />
+                <span asp-validation-for="Chemikalium.DataOdkrycia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Ph" class="control-label"></label>
+                <input asp-for="Chemikalium.Ph" class="form-control" />
+                <span asp-validation-for="Chemikalium.Ph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Rozpuszczalnosc" class="control-label"></label>
+                <input asp-for="Chemikalium.Rozpuszczalnosc" class="form-control" />
+                <span asp-validation-for="Chemikalium.Rozpuszczalnosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Toksycznosc" class="control-label"></label>
+                <input asp-for="Chemikalium.Toksycznosc" class="form-control" />
+                <span asp-validation-for="Chemikalium.Toksycznosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Zapach" class="control-label"></label>
+                <input asp-for="Chemikalium.Zapach" class="form-control" />
+                <span asp-validation-for="Chemikalium.Zapach" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.StanSkupienia" class="control-label"></label>
+                <input asp-for="Chemikalium.StanSkupienia" class="form-control" />
+                <span asp-validation-for="Chemikalium.StanSkupienia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Barwa" class="control-label"></label>
+                <input asp-for="Chemikalium.Barwa" class="form-control" />
+                <span asp-validation-for="Chemikalium.Barwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.TemperaturaTopnienia" class="control-label"></label>
+                <input asp-for="Chemikalium.TemperaturaTopnienia" class="form-control" />
+                <span asp-validation-for="Chemikalium.TemperaturaTopnienia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chemikalium.Uzytecznosc" class="control-label"></label>
+                <input asp-for="Chemikalium.Uzytecznosc" class="form-control" />
+                <span asp-validation-for="Chemikalium.Uzytecznosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
