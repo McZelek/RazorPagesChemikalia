@@ -15,27 +15,27 @@ public class Chemikalium
     [DataType(DataType.Date)]
     public DateTime DataOdkrycia { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     public string? Ph { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     public string? Rozpuszczalnosc { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     public string? Toksycznosc { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     public string? Zapach { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     [Display(Name = "Stan skupienia")]
@@ -43,13 +43,13 @@ public class Chemikalium
     
     public string? Barwa { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     [Display(Name = "Temperatura topnienia")]
     public string? TemperaturaTopnienia { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+    
     [Required]
     [StringLength(50)]
     public string Uzytecznosc { get; set; } = string.Empty;
